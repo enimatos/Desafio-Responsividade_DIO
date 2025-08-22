@@ -1,0 +1,360 @@
+body{
+    margin: 0 auto;
+    height: 100vh;
+    max-width: 1280px;
+    box-sizing: border-box;
+    font-family:'Open Sans',  sans-serif;
+    display: grid;
+    grid-gap: 5px;
+    grid: "header" 459px 
+          "main" 2170px 
+          "footer" 140px
+}   
+
+
+header {
+    grid-area: header;
+    height: 459px;
+    background-image: url("../img/imagemGrande.png");
+    background-size: cover;
+    background-position: center;
+
+}   
+
+header{
+    justify-items: center;
+    
+}
+
+.especial{
+    font-family:"Luckiest Guy", cursive;
+    font-weight: 400;
+    text-align: center;
+
+}
+.topo{
+    font-size: 58px;
+    width: 313px;
+    height: 112px;
+    color: #FFFFFF;
+}
+.p-header{
+    color: #FFFFFF;
+    text-align: center;
+    font: 16px 400;
+    width: 757px;
+}
+
+.botoes{
+    height: 44px;
+    width: 502px;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    gap:2rem;
+    
+}
+
+#btn-baixar, #btn-abrir{
+    border: none;
+    border-radius: 28px;
+    font:16px 400;
+    padding: 0.4rem 1.5rem;
+}
+
+#btn-baixar{
+    background-color: #FFFFFF;
+    
+}
+
+
+#btn-abrir{
+    background-color: black;
+    color: #FFFFFF;
+}
+
+main {
+    grid-area: main;
+}
+
+
+.item{
+    height: 488px;
+    max-width: 971px;
+    margin: auto;
+    display: flex;
+    color: #23272A;
+}
+
+
+.item img{
+    width: 60%;
+}
+
+.item-2, .item-final{
+    background-color: #F6F6F6;
+}
+.interna{
+    width: 40%;
+    flex-flow: wrap;
+    align-content: center;
+    justify-items: center;
+}
+
+.text-grande{
+    font-size: 38px;
+    font-weight: 800;
+    max-width: 329px;
+    
+}
+
+p{
+    font-size: 16px;
+    font-weight: 400;
+    text-align: justify;
+    width: 348px;
+
+}
+
+
+.item-final{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.base{
+    font-size: 40px;
+    height: 80px;
+    width: 608px;
+}
+
+
+.p-base{
+    width: 784px;
+}
+
+
+
+footer{
+    grid-area: footer;
+    height: 134px;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+@media screen and (max-width: 1050px){
+    body{
+        max-width: 100%;
+        grid: "header" 459px
+              "main" auto 
+              "footer" 140px;
+    }   
+
+
+    header{
+        background-image: url("../img/imagemGrande.png");
+        background-position:70%;
+        background-repeat: no-repeat;
+        align-content: space-around;
+    }   
+
+    .topo{
+        font-size: 40px;
+        width: 250px;
+        height: auto;
+        margin-top: 2rem;
+    }
+
+    .p-header{
+        width: 70%;
+        font-size: 14px;
+        height: 100px;
+        margin: auto;
+        margin-top: 1rem;
+    }
+
+    .botoes{
+        flex-direction: row;
+        width: 60%;
+        gap: 1rem;
+    }
+
+    #btn-baixar, #btn-abrir{
+        width: 50%;
+        padding: 0.8rem 1.5rem;
+        font-size: .9rem;
+    }
+
+    main{
+        grid-area: main;
+        width: 100%;
+    }
+
+    .item{
+        margin: 0;
+        max-width: 100%;
+        padding: 0 24px;
+    }
+
+    .item img{
+        width: 60%;
+    }
+
+    .item-2 .interna {
+            padding-left: 1rem;
+
+    }
+    .interna{
+        width: 100%;
+        text-align: center;
+        align-items: center;
+        margin: 0 2px;
+    }
+
+    .text-grande{
+        font-size: 28px;
+        max-width: 378px;
+        text-align: start;
+    }
+
+    p{
+        width: 100%;
+        text-align:start;
+    }
+
+    .base{
+        font-size: 28px;
+        width: 90%;
+        height: auto;
+    }
+
+    .p-base{
+        width: 90%;
+    }
+
+    .item-final{
+        height: 560px;
+    }
+    
+    
+    .item-final img{
+        width: 70%;
+    }
+
+}
+
+@media screen and (max-width: 600px){
+    body{
+        max-width: 100%;
+        grid: "header" 459px
+              "main" 2300px 
+              "footer" 140px;
+    }   
+
+    header{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }   
+
+    .topo{
+        font-size: 32px;
+        width: 278px;
+        height: 64px;
+        margin-top: 2rem;
+    }
+  
+
+    .p-header{
+        margin: 0;
+        width: 370px;
+        height: 122px;
+        text-align: start;
+        
+    }
+
+    .item-1, .item-3{
+        flex-direction: column;
+    }
+
+    .item-2{
+        flex-direction: column-reverse;
+        
+    }
+
+
+
+     .item-2 .interna{
+        padding-left: 0;
+
+     }
+  
+    
+    .botoes{
+        flex-direction: column;
+        width: 381px;
+        height: 122px;
+        gap: 1rem;
+    }
+
+    #btn-baixar, #btn-abrir{
+        width: 381px;
+        padding: 0.8rem 1.5rem;
+        font-size: .9rem;
+    }
+
+    main{
+        display: flex;
+        flex-direction: column;
+       
+    }
+
+    .item{
+        height: 505px;
+        padding: 40px 24px;
+        justify-content: center;
+        align-items: center;
+        margin: 0;
+    }
+
+    .item img, .item-final img{
+        width: 90%;
+    }
+
+    p{
+        width: 90%;
+    }
+    
+    .text-grande{
+        max-width: 90%;
+    }
+}
+
+@media screen and (max-width: 428px){
+    .topo{
+        text-align: start;
+        margin-left: -80px;
+    }
+
+    .item img, .item-final img{
+        width: 379px;
+        height: 252px;
+    }
+
+    .base{
+        font-size: 32px;
+        width: 376px;
+        height: 64px;
+    }
+
+
+
+}
