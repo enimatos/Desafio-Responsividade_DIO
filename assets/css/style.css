@@ -11,20 +11,26 @@ body{
           "footer" 140px
 }   
 
-
-header {
+header{
     grid-area: header;
-    height: 459px;
     background-image: url("../img/imagemGrande.png");
     background-size: cover;
     background-position: center;
+    background-repeat: no-repeat;
+    height: 459px; ;
 
-}   
-
-header{
-    justify-items: center;
-    
 }
+
+.header{
+    width: 757px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+
 
 .especial{
     font-family:"Luckiest Guy", cursive;
@@ -78,24 +84,25 @@ main {
 }
 
 
-.item{
+.conjunto{
     height: 488px;
-    max-width: 971px;
+    width: 971px;
     margin: auto;
     display: flex;
     color: #23272A;
 }
 
 
-.item img{
+.conjunto img{
     width: 60%;
 }
 
-.item-2, .item-final{
+.item-2, .item-4{
     background-color: #F6F6F6;
 }
+
 .interna{
-    width: 40%;
+    width: 394px;
     flex-flow: wrap;
     align-content: center;
     justify-items: center;
@@ -142,6 +149,7 @@ p{
 footer{
     grid-area: footer;
     height: 134px;
+    width: 100%;
     background-color: black;
     display: flex;
     justify-content: center;
@@ -152,44 +160,47 @@ footer{
 @media screen and (max-width: 1050px){
     body{
         max-width: 100%;
-        grid: "header" 459px
-              "main" auto 
-              "footer" 140px;
-    }   
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        height: auto
+    }
 
 
-    header{
-        background-image: url("../img/imagemGrande.png");
-        background-position:70%;
-        background-repeat: no-repeat;
-        align-content: space-around;
+
+    .header{
+        
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: 459px;
     }   
 
     .topo{
         font-size: 40px;
         width: 250px;
-        height: auto;
-        margin-top: 2rem;
+        margin: 0;
     }
 
     .p-header{
         width: 70%;
         font-size: 14px;
-        height: 100px;
-        margin: auto;
-        margin-top: 1rem;
+        height: 110px;
+
     }
 
     .botoes{
         flex-direction: row;
-        width: 60%;
+        width: 70%;
         gap: 1rem;
     }
 
     #btn-baixar, #btn-abrir{
         width: 50%;
         padding: 0.8rem 1.5rem;
-        font-size: .9rem;
+        font-size: .8rem;
     }
 
     main{
@@ -198,13 +209,22 @@ footer{
     }
 
     .item{
-        margin: 0;
+        margin: 0 auto;
         max-width: 100%;
         padding: 0 24px;
     }
 
-    .item img{
-        width: 60%;
+    .conjunto img{
+        width: 50%;
+    }
+    .conjunto{
+        display: flex;
+        max-width: 100%;
+        justify-content: center;
+    }
+ 
+    .item-4{
+    padding-top: 4rem;
     }
 
     .item-2 .interna {
@@ -212,31 +232,37 @@ footer{
 
     }
     .interna{
-        width: 100%;
+        width: 40%;
+        display: flex;
         text-align: center;
         align-items: center;
+        justify-content: flex-start;
         margin: 0 2px;
+        gap : 1rem;
     }
 
     .text-grande{
         font-size: 28px;
-        max-width: 378px;
+        max-width: 100%;
+        margin: 0;
         text-align: start;
     }
 
     p{
-        width: 100%;
+        max-width: 100%;
         text-align:start;
+        margin: 0;
     }
 
     .base{
         font-size: 28px;
         width: 90%;
-        height: auto;
+        margin-top: 2rem;
     }
 
     .p-base{
-        width: 90%;
+        width: 80%;
+        margin-top: 2rem;
     }
 
     .item-final{
@@ -245,48 +271,44 @@ footer{
     
     
     .item-final img{
-        width: 70%;
+        width: 75%;
+        margin: 0;;
     }
 
 }
 
 @media screen and (max-width: 600px){
-    body{
-        max-width: 100%;
-        grid: "header" 459px
-              "main" 2300px 
-              "footer" 140px;
-    }   
-
+  
     header{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
+        width: 100%
+    }
+
+    .header{
+        max-width: 381px;
+        margin: auto;
+        align-items: baseline;
+        gap: 1rem;
     }   
 
     .topo{
         font-size: 32px;
-        width: 278px;
+        max-width: 278px;
         height: 64px;
-        margin-top: 2rem;
+        text-align: start;
+        margin-bottom: 1rem;
     }
   
 
     .p-header{
         margin: 0;
         width: 370px;
-        height: 122px;
+        height: 100px;
         text-align: start;
         
     }
 
-    .item-1, .item-3{
-        flex-direction: column;
-    }
-
-    .item-2{
-        flex-direction: column-reverse;
+    #item-2{
+        flex-wrap: wrap-reverse;
         
     }
 
@@ -300,15 +322,16 @@ footer{
     
     .botoes{
         flex-direction: column;
-        width: 381px;
+        max-width: 381px;
         height: 122px;
         gap: 1rem;
+        width: 100%;
     }
 
     #btn-baixar, #btn-abrir{
-        width: 381px;
         padding: 0.8rem 1.5rem;
         font-size: .9rem;
+        width: 100%;
     }
 
     main{
@@ -317,18 +340,19 @@ footer{
        
     }
 
-    .item{
+    .conjunto{
         height: 505px;
         padding: 40px 24px;
-        justify-content: center;
-        align-items: center;
-        margin: 0;
+        flex-wrap: wrap;
     }
 
-    .item img, .item-final img{
-        width: 90%;
+    .conjunto img, .item-final img{
+        width: 80%;
     }
 
+    .interna{
+        width: 100%;
+    }
     p{
         width: 90%;
     }
@@ -336,25 +360,10 @@ footer{
     .text-grande{
         max-width: 90%;
     }
+
+    .item-4{
+        padding-top: 0;
+
+    }
 }
 
-@media screen and (max-width: 428px){
-    .topo{
-        text-align: start;
-        margin-left: -80px;
-    }
-
-    .item img, .item-final img{
-        width: 379px;
-        height: 252px;
-    }
-
-    .base{
-        font-size: 32px;
-        width: 376px;
-        height: 64px;
-    }
-
-
-
-}
